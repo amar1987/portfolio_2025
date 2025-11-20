@@ -11,7 +11,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <>
             <Head>
                 <title>Amar Doekhie&apos;s Portfolio</title>
-
             </Head>
             <div className="min-h-screen bg-glass-bg flex flex-col items-center p-4">
                 <main className="
