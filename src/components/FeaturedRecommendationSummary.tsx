@@ -1,10 +1,6 @@
-import React from 'react';
-import ExperienceCard from './ExperienceCard';
 import { recommendationsData } from '../data/recommendations';
 import RecommendationCard from './RecommendationCard';
-
-const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/portfolio_2025' : '';
+import { basePath } from '@/utils/basePath';
 
 const FeaturedRecommendationSummary: React.FC = () => {
     const featuredRecommendations = recommendationsData.slice(0, 3);

@@ -1,4 +1,3 @@
-import React from 'react';
 import FeaturedExperienceSummary from '@/components/FeaturedExperienceSummary';
 import FeaturedProjectSummary from '@/components/FeaturedProjectSummary';
 import AboutMe from '@/components/AboutMe';

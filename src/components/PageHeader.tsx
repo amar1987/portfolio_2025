@@ -1,5 +1,3 @@
-import React from 'react';
-
 const PageHeader: React.FC = () => {
     return (
         <header className="mb-8 p-2 border-b-4 border-retro-border ">

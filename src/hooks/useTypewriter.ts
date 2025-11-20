@@ -4,7 +4,7 @@ export const useTypewriter = (text: string, speed: number = 50) => {
     const [displayedText, setDisplayedText] = useState('');
 
     useEffect(() => {
-        setDisplayedText(''); // Reset on text change
+        setDisplayedText('');
         let index = 0;
         const interval = setInterval(() => {
             if (index < text.length) {
@@ -16,7 +16,6 @@ export const useTypewriter = (text: string, speed: number = 50) => {
         }, speed);
 
         return () => clearInterval(interval);
-    }, [text, speed]); // Reset when text changes
-
+    }, [text, speed]);
     return displayedText;
 };

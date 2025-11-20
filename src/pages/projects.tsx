@@ -13,7 +13,7 @@ const ProjectPage: React.FC = () => {
     return (
         <section className="md:p-4">
             <div className="border-4 border-lime-400 bg-gray-900 p-4 font-pixel md:w-full lg:w-full">
-                <div className="font-mono text-white text-sm mb-4 border-b border-retro-border pb-2">
+                <div className="font-mono text-white text-sm mb-4 border-b pb-2">
                     C:\&gt; run project_module.sh
                 </div>
 
@@ -39,7 +39,7 @@ const ProjectPage: React.FC = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className={`
-    font-pixel text-sm uppercase px-4 py-2 transition duration-100 ease-in-out cursor-pointer shadow-retro-button
+    font-pixel text-sm uppercase px-4 py-2 transition duration-100 ease-in-out cursor-pointer
     bg-white hover:bg-gray-400
     // Replaces .retro-press
     active:translate-x-1 active:translate-y-1 active:shadow-none
@@ -53,7 +53,7 @@ const ProjectPage: React.FC = () => {
                     ))}
                 </ul>
 
-                <div className="font-mono text-white text-sm mt-6 pt-4 border-t border-retro-border">
+                <div className="font-mono text-white text-sm mt-6 pt-4 border-t">
                     C:\&gt; <span className="blink">_</span>
                 </div>
             </div>

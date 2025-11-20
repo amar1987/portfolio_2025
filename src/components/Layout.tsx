@@ -13,11 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <title>Amar Doekhie&apos;s Portfolio</title>
 
             </Head>
-
-            {/* Outer container: Light background for full screen experience */}
             <div className="min-h-screen bg-glass-bg flex flex-col items-center p-4">
-
-                {/* Main Glass Container: Translucent white surface, blurred background */}
                 <main className="
             w-full max-w-7xl 
             bg-glass-surface/50 text-glass-text 
@@ -30,7 +26,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <div className="mb-6 pb-4 border-b border-glass-surface/40">
                         <NavBar />
                     </div>
-
                     <div className="flex-1 overflow-y-auto">
                         <div className="font-mono text-base text-glass-text">
                             {children}
