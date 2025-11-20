@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   // This line is essential for static site generation
   output: 'export',
@@ -9,6 +11,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  assetPrefix: isProd ? '/portfolio_2025/' : '',
+  basePath: isProd ? '/portfolio_2025' : '',
 };
 
 module.exports = nextConfig;
