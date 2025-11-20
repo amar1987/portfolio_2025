@@ -3,6 +3,9 @@ import ExperienceCard from './ExperienceCard';
 import { recommendationsData } from '../data/recommendations';
 import RecommendationCard from './RecommendationCard';
 
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/portfolio_2025' : '';
+
 const FeaturedRecommendationSummary: React.FC = () => {
     const featuredRecommendations = recommendationsData.slice(0, 3);
 
@@ -19,7 +22,7 @@ const FeaturedRecommendationSummary: React.FC = () => {
             </div>
 
             <div className="text-right mt-4">
-                <a href="/recommendations" className="font-mono text-sm text-retro-green hover:underline">
+                <a href={`${basePath}/recommendations`} className="font-mono text-sm text-retro-green hover:underline">
                     [View All Recommendations]
                 </a>
             </div>

@@ -2,6 +2,9 @@ import React from 'react';
 import ExperienceCard from './ExperienceCard';
 import { experienceData } from '../data/experience';
 
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/portfolio_2025' : '';
+
 const FeaturedExperienceSummary: React.FC = () => {
     const featuredExperience = experienceData.slice(0, 2);
 
@@ -18,7 +21,7 @@ const FeaturedExperienceSummary: React.FC = () => {
             </div>
 
             <div className="text-right mt-4">
-                <a href="/experience" className="font-mono text-sm text-retro-green hover:underline">
+                <a href={`${basePath}/experience`} className="font-mono text-sm text-retro-green hover:underline">
                     [View All Experiences]
                 </a>
             </div>

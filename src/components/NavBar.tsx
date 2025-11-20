@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/portfolio_2025' : '';
+
 
 const navItems = [
     { name: 'HOME', path: '/' },
@@ -18,7 +17,7 @@ const NavBar: React.FC = () => {
             <ul className="flex flex-wrap gap-6 justify-center">
                 {navItems.map((item) => (
                     <li key={item.path}>
-                        <Link href={`${basePath}${item.path}`} passHref legacyBehavior>
+                        <Link href={item.path} passHref legacyBehavior>
                             <a
                                 // Styling for a high-contrast glass link in light mode
                                 className={`

@@ -2,6 +2,9 @@ import React from 'react';
 import { projectData } from '@/data/projects';
 import ProjectCard from './ProjectCard';
 
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/portfolio_2025' : '';
+
 const FeaturedProjectSummary: React.FC = () => {
     const featuredProjects = projectData.slice(0, 2);
 
@@ -17,7 +20,7 @@ const FeaturedProjectSummary: React.FC = () => {
             </div>
 
             <div className="text-right mt-4">
-                <a href="/projects" className="font-mono text-sm text-retro-green hover:underline">
+                <a href={`${basePath}/projects`} className="font-mono text-sm text-retro-green hover:underline">
                     [View All Projects]
                 </a>
             </div>

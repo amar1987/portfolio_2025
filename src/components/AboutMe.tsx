@@ -1,5 +1,8 @@
 import Image from 'next/image';
 
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/portfolio_2025' : '';
+
 const AboutMe: React.FC = () => (
     <div className="mb-12 p-4  shadow-retro-outline">
         <h2 className="font-pixel text-2xl text-retro-red mb-6 border-b-2 border-retro-red pb-1">
@@ -9,7 +12,7 @@ const AboutMe: React.FC = () => (
         <div className="flex flex-col md:flex-row gap-6 items-start">
             <div className="flex-shrink-0">
                 <Image
-                    src="../images/Amar.jpeg"
+                    src={`${basePath}/images/Amar.jpeg`}
                     alt="Amar Doekhie"
                     width={200}
                     height={200}
